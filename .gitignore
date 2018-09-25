@@ -21,3 +21,10 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+.idea/inspectionProfiles/
+.idea/vcs.xml
+target/classes/application.properties
+target/generated-sources/
+target/resthelloapp.war.original
+target/resthelloapp/META-INF/
+target/resthelloapp/WEB-INF/classes/application.properties
