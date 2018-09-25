@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="restservicespringboot:war">
     <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="rest-service-spring-boot-1.0-SNAPSHOT.war">
+    <root id="archive" name="resthelloapp.war">
       <element id="artifact" artifact-name="restservicespringboot:war exploded" />
     </root>
   </artifact>
