@@ -7,6 +7,9 @@
     <groupId>com.nsv.springioref</groupId>
     <artifactId>rest-service-spring-boot</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+
 
 
     <parent>
@@ -20,6 +23,18 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+
+        <!-- For War File Deployment to container - BEGIN-->
+        <!-- marked the embedded servlet container as provided -->
+        <!-- Provided (for embedded war support) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!-- For War File Deployment to container - END-->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -46,6 +61,7 @@
 
 
     <build>
+        <finalName>resthelloapp</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

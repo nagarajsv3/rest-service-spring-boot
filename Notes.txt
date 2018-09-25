@@ -1,1 +1,22 @@
-1.
+--Convert spring boot jar to war and deploy to tomcat
+--Converting jar to war
+1. Applcation class extends SpringBootServletInitializer
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(Application.class);
+    }
+
+2. Change the packaging type from jar to war
+3. To ensure that the embedded servlet container does not interfere with the servlet container to
+which the war file is deployed. To do so, you need to mark the embedded servlet container dependency as being provided.
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-tomcat</artifactId>
+		<scope>provided</scope>
+	</dependency>
+4. Build the application. maven clean install
+5. Place the war file in the tomcat/webapp folder
+6. Start the tomcat and tomcat automatically unzips the war file and starts serving the requests
+    http://localhost:8090/greeting?name=Baba
+
